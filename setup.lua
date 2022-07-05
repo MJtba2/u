@@ -1,8 +1,8 @@
 #!/usr/bin/env lua5.3
-os.execute('sudo rm -rf /usr/lib/x86_64-linux-gnu/lua/5.3/luatele.so')
-os.execute('sudo rm -rf /usr/local/share/lua/5.3/luatele.lua')
+os.execute('sudo rm -rf /usr/lib/x86_64-linux-gnu/lua/5.3/tdbot.so')
+os.execute('sudo rm -rf /usr/local/share/lua/5.3/tdbot.lua')
 local so_path_file = {'/usr','lib','x86_64-linux-gnu','lua','5.3','tdlua.so'}
-local luatele_client_path = {'/usr','local','share','lua','5.3','luatele.lua'}
+local tdbot_client_path = {'/usr','local','share','lua','5.3','luatele.lua'}
 function exists(file_path)
  local ok, err, code = os.rename(file_path, file_path)
  if not ok then
@@ -24,13 +24,13 @@ os.execute('sudo mkdir '..path)
 end
 end
 end
-if os.execute('unzip luatele.zip') then
+if os.execute('unzip tdbot.zip') then
 rem_and_create_dir(so_path_file)
-os.execute('sudo mv luatele.so ' .. table.concat(so_path_file, '/'))
-rem_and_create_dir(luatele_client_path)
-os.execute('sudo mv luatele.lua ' .. table.concat(luatele_client_path, '/'))
-os.execute('sudo rm -rf luatele.zip')
-if exists(table.concat(so_path_file, '/')) and exists(table.concat(luatele_client_path, '/')) then
+os.execute('sudo mv tdbot.so ' .. table.concat(so_path_file, '/'))
+rem_and_create_dir(tdbot_client_path)
+os.execute('sudo mv tdbot.lua ' .. table.concat(tdbot_client_path, '/'))
+os.execute('sudo rm -rf tdbot.zip')
+if exists(table.concat(so_path_file, '/')) and exists(table.concat(tdbot_client_path, '/')) then
 os.execute('sudo lua5.3 start.lua')
 end
 end

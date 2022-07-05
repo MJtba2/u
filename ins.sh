@@ -21,9 +21,9 @@ sudo apt install build-essential checkinstall zlib1g-dev -y
 mkdir tmp
 cd tmp
 git clone https://github.com/george0884/lua-curl-error && cd lua-curl-error && tar -xzvf curl.tar.gz && sudo cp curl -r /usr/include/ && cd .. && sudo rm -Rf lua-curl-error
-wget https://luarocks.org/releases/luarocks-3.3.0.tar.gz --no-check-certificate
-tar zxpf luarocks-3.3.0.tar.gz
-cd luarocks-3.3.0
+sudo  wget https://luarocks.org/releases/luarocks-2.4.3.tar.gz
+sudo  tar zxpf luarocks-2.4.3.tar.gz
+cd luarocks-2.4.3
 ./configure && make && sudo make install
 sudo luarocks install luarocks
 sudo luarocks install luasec
@@ -42,7 +42,7 @@ fi
 if [ "$1" = "ins" ]; then
 install
 cd ..
-cd u
+cd uu
 rm -rf luarocks*
 sudo lua5.3 setup.lua
 fi
