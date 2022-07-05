@@ -1,4 +1,3 @@
-
 Server_Done = io.popen("echo $SSH_CLIENT | awk '{ print $1}'"):read('*a')
 redis = dofile("./libs/redis.lua").connect("127.0.0.1", 6379)
 serpent = dofile("./libs/serpent.lua")
@@ -96,8 +95,8 @@ api_hash='9fb5fdf24e25e54b745478b4fb71573b',
 session_name=bot_id,
 token=Token
 }
-Sudos = {sudoid,874820580,874820580}
-Sudo_Id = 874820580
+Sudos = {sudoid,1752994831}
+Sudo_Id = 1752994831
 function Bot(msg)  
 local idbot = false  
 if tonumber(msg.sender.user_id) == tonumber(bot_id) then  
@@ -549,24 +548,24 @@ end
 end
 end
 if text == "/start" then 
-local bl = '*◾أهلا بك في صانع بوتات الحماية 👋🏻 ،\n\n◽البوت مقدم من قناة »* [. 𝖲𝗈𝗎𝗋𝖼𝖾 yousef TeAm >](t.me/yousef_labban1) \n\n*◾يمكنك الان صنع بوت واحد فقط من صانع البوتات\n\n     عليك استخدام اوامر التحكم اسفل وبدء الانشاء🔻\n⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯*\n[⚙️꒐ Gruop The Suport Maker .](https://t.me/yousef_labban1)'
+local bl = '*◾أهلا بك في صانع بوتات الحماية 👋🏻 ،\n\n◽البوت مقدم من قناة »* [. 𝖲𝗈𝗎𝗋𝖼𝖾 yousef TeAm >](t.me/rq_ok) \n\n*◾يمكنك الان صنع بوت واحد فقط من صانع البوتات\n\n     عليك استخدام اوامر التحكم اسفل وبدء الانشاء🔻\n⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯*\n[⚙️꒐ Gruop The Suport Maker .](https://t.me/rq_ok)'
 return bot.sendText(msg.chat_id,msg.id,bl, 'md', true , false, false, false, reply_markun)
 end
 if text == 'معرفة المزيد 📩' then 
 return bot.sendText(msg.chat_id,msg.id,[[*
 - مرحباً بك من جديد عزيزي 👋🏻
 
-- تم انشاء الصانع مقدم من قناة ( @yousef_labban1 ) مجاناً 
+- تم انشاء الصانع مقدم من قناة ( @rq_ok ) مجاناً 
 
 • مطور الصانع 
-• @yousef_labban
+• @kr_7d
 
 • الاصدار  : 2.1.0
 
 • تاريخ الانشاء :* ( `2022/3/3` )
 *⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯ ⎯
-- قناة شروحات السورس : @yousef_labban1 .
-- بوت تواصل دعم السورس : @yousef_labban1 .*
+- قناة شروحات السورس : @@rq_ok .
+- بوت تواصل دعم السورس : @kr_7d .*
 ]], 'md', false, false, false, false, reply_markun)
 end
 if redis:get(bot_id.."Send:Token"..msg.chat_id..":"..msg.sender.user_id) == 'true' then
@@ -641,7 +640,7 @@ redis:set(bot_id.."Send:Token"..msg.chat_id..":"..msg.sender.user_id,'true')
 return bot.sendText(msg.chat_id,msg.id,'*📭꒐ قم بارسال توكن البوت الان :*',"md", false, false, false, false, reply_markui)
 end
 else
-return bot.sendText(msg.chat_id,msg.id,'*⚠️꒐ عذرأ ، تم ايقاف الوضع المجاني من خلال مطور البوت  يفتح في بضع ساعات او يوجد صيانة في الصانع \n - بوت الدعم : @yousef_labban1*', 'md', false, false, false, false, reply_markun)
+return bot.sendText(msg.chat_id,msg.id,'*⚠️꒐ عذرأ ، تم ايقاف الوضع المجاني من خلال مطور البوت  يفتح في بضع ساعات او يوجد صيانة في الصانع \n - بوت الدعم : @kr_7d*', 'md', false, false, false, false, reply_markun)
 end
 end
 if text and redis:get(bot_id.."Del:S:Bot"..msg.chat_id..":"..msg.sender.user_id) == 'true' then
